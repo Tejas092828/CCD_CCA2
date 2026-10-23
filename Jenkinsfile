@@ -1,10 +1,8 @@
 pipeline {
     agent any
     environment {
-        environment {
-    DOCKER_IMAGE = 'tejas0909/my-web-app:latest'
-    CREDENTIALS_ID = 'docker-hub-credentials'
-}
+        DOCKER_IMAGE = 'tejas0909/my-web-app:latest'
+        CREDENTIALS_ID = 'docker-hub-credentials'
     }
     stages {
         stage('Checkout Code') {
@@ -15,7 +13,6 @@ pipeline {
         stage('Build and Test') {
             steps {
                 sh 'echo "Running build and syntax checks..."'
-                // Add your test commands here, e.g., pytest or python -m py_compile app.py
                 sh 'python3 -m py_compile app.py'
             }
         }
