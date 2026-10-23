@@ -1,8 +1,10 @@
 pipeline {
     agent any
     environment {
-        DOCKER_IMAGE = 'YOUR_DOCKERHUB_USERNAME/my-web-app:latest'
-        CREDENTIALS_ID = 'docker-hub-credentials'
+        environment {
+    DOCKER_IMAGE = 'tejas0909/my-web-app:latest'
+    CREDENTIALS_ID = 'docker-hub-credentials'
+}
     }
     stages {
         stage('Checkout Code') {
