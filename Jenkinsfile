@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKER_IMAGE = 'tejas0909/my-web-app:latest'
-        CREDENTIALS_ID = 'docker-hub-credentials'
+        CREDENTIALS_ID = 'docker-hub-credential'
     }
     stages {
         stage('Checkout Code') {
